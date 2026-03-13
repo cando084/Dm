@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  sew:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        execute: ["generate", "following", "superior", "constitute", "least"]
+        male: ["instant", "groundsheet", "reproduce", "rank"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar gs
